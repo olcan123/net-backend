@@ -154,7 +154,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "http://localhost:5173", // local
-            "https://empcalc-frontend.onrender.com" // canlı Vue domaini (güncelle)
+            "https://vue-frontend-x5vs.onrender.com" // canlı Vue domaini (güncelle)
         )
         .AllowAnyHeader()
         .AllowAnyMethod();
