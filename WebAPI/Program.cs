@@ -13,7 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 
-#region eski
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
@@ -43,6 +43,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins("http://localhost:5173") // Vue URL'si
+                  .WithOrigins("https://vue-frontend-x5vs.onrender.com")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -124,5 +125,4 @@ app.MapControllers(); // API Controller'lar�n� etkinle�tirir
 
 app.Run();
 
-#endregion
 
